@@ -9,10 +9,20 @@
       "UnauthRoleName": "amplify-wechatplusbackend-staging-140103-unauthRole",
       "StackName": "amplify-wechatplusbackend-staging-140103",
       "StackId": "arn:aws:cloudformation:us-east-1:924908914525:stack/amplify-wechatplusbackend-staging-140103/754515f0-5924-11ed-9ae9-0acac7b0c4eb",
-      "AmplifyAppId": "d2h8bxnvzpcyog"
+      "AmplifyAppId": "d2h8bxnvzpcyog",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-wechatplusbackend-staging-140103-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
+        "wechatplusbackend": {}
+      },
+      "function": {
+        "wechatplusbackendPostConfirmation": {
+          "deploymentBucketName": "amplify-wechatplusbackend-staging-140103-deployment",
+          "s3Key": "amplify-builds/wechatplusbackendPostConfirmation-434c6c764a5151376e36-build.zip"
+        }
+      },
+      "api": {
         "wechatplusbackend": {}
       }
     }
