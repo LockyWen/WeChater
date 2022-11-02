@@ -6,7 +6,7 @@
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import { ColorSchemeName, View, Text, Image, useWindowDimensions } from 'react-native';
+import { ColorSchemeName, View, Text, Image, useWindowDimensions, Pressable } from 'react-native';
 import { Feather } from '@expo/vector-icons'; 
 
 import NotFoundScreen from '../screens/NotFoundScreen';
@@ -15,6 +15,8 @@ import LinkingConfiguration from './LinkingConfiguration';
 
 import ChatRoomScreen from '../screens/ChatRoomScreen';
 import HomeScreen from '../screens/HomeScreen';
+
+import {Auth} from 'aws-amplify';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -55,6 +57,10 @@ function RootNavigator() {
 const HomeHeader = (props) => {
   const { width } = useWindowDimensions();
 
+  const logOut = () => {
+    Auth.signOut()
+  }
+
   return (
     <View style={{ 
       flexDirection: 'row',
@@ -63,10 +69,13 @@ const HomeHeader = (props) => {
       padding: 10,
       alignItems: 'center',
     }}>
-      <Image 
-        source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg'}}
-        style={{ width: 30, height: 30, borderRadius: 30}}
-      />
+      <Pressable onPress={logOut}>
+        <Image 
+          source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg'}}
+          style={{ width: 30, height: 30, borderRadius: 30}}
+        />
+      </Pressable>
+
       <Text style={{flex: 1, textAlign: 'center', marginLeft: 50, fontWeight: 'bold'}}>Signal</Text>
       <Feather name="camera" size={24} color="black" style={{ marginHorizontal: 10}} />
       <Feather name="edit-2" size={24} color="black" style={{ marginHorizontal: 10}} />

@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wechatplusbackend-staging-140103-authRole",
+      "UnauthRoleArn": "arn:aws:iam::924908914525:role/amplify-wechatplusbackend-staging-140103-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::924908914525:role/amplify-wechatplusbackend-staging-140103-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wechatplusbackend-staging-140103-deployment",
+      "UnauthRoleName": "amplify-wechatplusbackend-staging-140103-unauthRole",
+      "StackName": "amplify-wechatplusbackend-staging-140103",
+      "StackId": "arn:aws:cloudformation:us-east-1:924908914525:stack/amplify-wechatplusbackend-staging-140103/754515f0-5924-11ed-9ae9-0acac7b0c4eb",
+      "AmplifyAppId": "d2h8bxnvzpcyog"
+    },
+    "categories": {
+      "auth": {
+        "wechatplusbackend": {}
+      }
+    }
+  }
+}
