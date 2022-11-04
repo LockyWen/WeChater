@@ -3,7 +3,6 @@
  */
 
 const aws = require("aws-sdk");
-const { not } = require('react-native-reanimated');
 const dynamoDBClient = new aws.DynamoDB();
 
 const tableName = process.env.USERTABLE;
@@ -19,6 +18,7 @@ exports.handler = async (event) => {
 
   const now = new Date()
   const timestamp = now.getTime();
+  
   const userItem = {
     __typename: { S: 'User' },
     _lastChangedAt: { N: timestamp.toString() },
@@ -29,11 +29,15 @@ exports.handler = async (event) => {
     name: { S: event.request.userAttributes.email },
   }
 
+  console.warn(userItem)
+
   
   const params = {
     Item: userItem,
     TableName: tableName
   };
+
+  console.warn(params)
   
   // save a new user to DynamoDB
   try {

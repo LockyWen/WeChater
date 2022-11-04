@@ -19,7 +19,7 @@
       "function": {
         "wechatplusbackendPostConfirmation": {
           "deploymentBucketName": "amplify-wechatplusbackend-staging-140103-deployment",
-          "s3Key": "amplify-builds/wechatplusbackendPostConfirmation-434c6c764a5151376e36-build.zip"
+          "s3Key": "amplify-builds/wechatplusbackendPostConfirmation-762f52512f38616f647a-build.zip"
         }
       },
       "api": {
